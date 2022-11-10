@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div
+        class="panelfont justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <span id="greetings">Edit Profile</span>
+    </div>
+    <div class="panelfont container justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3"
+        id="editProfile">
+        <div id="updateProfileValidationContainer"></div>
+        <form id="editProfileForm" onsubmit="updateProfile(event);">
+            <div id="">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" class="form-control" id="firstName" maxlength="64"
+                                required readonly />
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="middleName">Middle Name:</label>
+                            <input type="text" class="form-control" id="middleName" maxlength="64" 
+                            readonly />
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" class="form-control" id="lastName" maxlength="64"
+                                required readonly />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="emailID" class="mandatory">Email ID:</label>
+                            <input type="email" class="form-control" id="emailID" name="emailID" maxlength="64"
+                                required />
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="mobileNumber" class="mandatory">Mobile Number:</label>
+                            <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber"
+                                onkeypress="return isValidPhoneNumber(event)" maxlength="16" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style=text-align:center>
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-passport form-control signon-button">
+                                <span class="signon-button-text">Update Profile</span>
+                                <div class="signon-loader-container">
+                                    <div class="signon-loader"></div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-sm"></div>
+                </div>
+
+            </div>
+    </div>
+    </form>
+    <div
+        class="panelfont justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <span id="greetings">Change Password</span>
+    </div>
+    <div class="panelfont container justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3"
+        id="changePassword">
+        <div id="changePasswordValidationContainer"></div>
+        <form id="changePassword" onsubmit="updatePassword(event)">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="currentpassword" class="mandatory">Current Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" minlength="8"
+                            maxlength="64" required />
+                        <span title="View/Hide Password" toggle="#password"
+                            class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="newPassword" class="mandatory">New Password:</label>
+                        <input type="password" class="form-control" id="newPassword" name="newPassword"
+                            minlength="8" maxlength="64" required />
+                        <span title="View/Hide Password" toggle="#newPassword"
+                            class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="confirmPassword" class="mandatory">Confirm Password:</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                            minlength="8" maxlength="64" required />
+                        <span title="View/Hide Password" toggle="#confirmPassword"
+                            class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" style=text-align:center>
+                <div class="col-sm"></div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-passport form-control signon-button">
+                            <span class="signon-button-text">Change Password</span>
+                            <div class="signon-loader-container">
+                                <div class="signon-loader"></div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm"></div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script src="js/editProfile.js"></script>
+
+</html>

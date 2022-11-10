@@ -1,0 +1,4 @@
+Admin:
+
+User Email Id: admin@pas.com
+Password: admin_pass
